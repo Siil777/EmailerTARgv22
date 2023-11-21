@@ -3,19 +3,19 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
 mail-on-push:
-runs on: ubuntu-latest
+runs-on: ubuntu-latest
 steps:
--name: Send mail
+- name: Send mail
 uses: dawidd6/action-send-mail@v3
 with:
 server_address: stmp.gmail.com
 server_port: 465
-username: ${{secterts.MAIL_USERNAME}}
-password: ${{sectrets.MAIL_PASSWORD}} 
+username: ${{secrets.MAIL_USERNAME}}
+password: ${{secrets.MAIL_PASSWORD}} 
 subject: NIGERIAN PRINCE 
 body: Email test from ${{github.repository}}. which is owned by
 ${{github.event.pusher.name}}
-to: pavel.ivanov.hardworking@gmail.com
+to: jyri.vaitmaa@tthk.ee
 from: Github Actions
 
   Explore-GitHub-Actions:
